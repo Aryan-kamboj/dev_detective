@@ -15,13 +15,13 @@
 ::placeholder{
     color: var(--text-color);
 }
+body{
+    background: var(--wrapper-bg-color);
+}
 .wrapper_dark{
-    background-color: var(--wrapper-bg-color);
     height: fit-content;
-    width: 100vw;
     padding-top:5.5rem;
-    box-sizing: border-box;
-    height:100vh;
+    min-height:100vh;
 } 
 #headder{
     padding:2rem;
@@ -50,7 +50,7 @@
     align-items: center;
     display: flex;
     margin:auto;
-    width: 50vw;
+    width: 50%;
     justify-content: space-between;
     padding: 0.75rem;
     border-radius: 10px;
@@ -86,7 +86,7 @@
     margin-top:1.5rem;
     padding:2rem;
     height: fit-content;
-    display: flex;
+    /* display: flex; */
     border-radius: 10px;
     background-color: var(--main-bg-color);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
@@ -97,9 +97,9 @@
     border-radius: 50%;
 }
 #content{
-    padding-left:2.5rem;
+    padding-left:10.2rem;
     padding-top:0.5rem;
-   
+    
 }
 #name{
     color:var(--text-color-black-white);
@@ -108,12 +108,18 @@
 #date_joined{
     color:var(--text-color);
 }
-#profile_info{
+#top{
     color: var(--text-color);
     display: flex;
-    justify-content: space-between;
     text-align: left;
     line-height: 2rem;
+}
+#profile_info{
+    padding-left: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
 }
 #bio{
     color: rgb(152, 162, 180);
@@ -150,4 +156,71 @@
 .contacts_class span,.contacts_class a{
     color: var(--text-color);
 
+}
+@media screen and (max-width:1197px) and (min-width:768px) {
+    #profile_info{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    #content{
+        padding-left:0rem;
+        padding-top:0.5rem;  
+    }
+}
+@media screen and (max-width:767px){
+    .wrapper{
+        min-width: 328px;
+    }
+    .wrapper_dark{
+        background-repeat: repeat-x;
+    }
+    #headder{
+        width:328px;
+        font-size: smaller;
+    }
+    #headder b{
+        font-size: smaller;
+    }
+    #profile_info{
+        display: flex;
+        flex-wrap:wrap;
+        line-height: initial;
+    }
+    #search_bar{
+        width:328px ;
+    }
+    #main{
+        width:328px ;
+    }
+    #content{
+        padding-left:0rem;
+        padding-top:0.5rem;  
+    }
+    #profile_picture{
+        width: 5rem;
+        height: 5rem;
+    }
+    #name{
+        font-size: medium;
+        font-style: bold;
+    }
+    #profile_link{
+        font-size: small;
+    }
+    #date_joined{
+        font-size: small;
+    }
+    #profile_stats{
+        width: 310px;
+        position: relative;
+        left: -22px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #contacts{
+        display: flex;
+        flex-direction: column;
+    }
 }

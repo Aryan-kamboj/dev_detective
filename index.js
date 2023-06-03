@@ -74,6 +74,7 @@ username.addEventListener("keydown",(e)=>{
         get_user_data(username.value);
     }
 },false);
+get_user_data("aryan-kamboj");
 // {
 //     "login": "Aryan-kamboj",
 //     "id": 90714196,
